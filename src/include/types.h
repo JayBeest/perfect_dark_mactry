@@ -8,6 +8,10 @@
 #include "pads.h"
 #include "tiles.h"
 #include "gbi.h"
+
+#include "stdio.h"
+#include "strings.h"
+
 #ifndef PLATFORM_N64
 #include "platform.h"
 #endif
@@ -5357,7 +5361,7 @@ struct guncmd {
 	u8 type;
 	u8 unk01;
 	u16 unk02;
-	s32 unk04;
+	intptr_t unk04;
 };
 
 struct pakthing {

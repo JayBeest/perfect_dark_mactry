@@ -7,6 +7,9 @@
 #elif defined(__linux__)
 	#define PLATFORM_POSIX 1
 	#define PLATFORM_LINUX 1
+#elif defined(__aarch64__)
+	#define PLATFORM_POSIX 1
+	#define PLATFORM_DARWIN 1
 #else
 	// assume POSIX-compatible
 	#define PLATFORM_POSIX 1
@@ -30,9 +33,9 @@
 #endif
 
 // TODO: remove this after 64-bit support is in place
-#ifdef PLATFORM_64BIT
-	#error "64-bit platforms are currently not supported."
-#endif
+//#ifdef PLATFORM_64BIT
+//	#error "64-bit platforms are currently not supported."
+//#endif
 
 // detect endianness
 #if defined(__BYTE_ORDER__) && defined(__ORDER_BIG_ENDIAN__)

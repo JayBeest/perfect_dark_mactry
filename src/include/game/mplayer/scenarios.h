@@ -3,6 +3,7 @@
 #include <ultra64.h>
 #include "data.h"
 #include "types.h"
+#include "game/options.h"
 
 extern struct menudialogdef g_MpScenarioMenuDialog;
 extern struct menudialogdef g_MpQuickTeamScenarioMenuDialog;

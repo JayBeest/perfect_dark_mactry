@@ -80,13 +80,13 @@ extern "C" {
 
 /* byte string operations */
 
-extern void     bcopy(const void *, void *, size_t);
-extern int      bcmp(const void *, const void *, size_t);
-extern void     bzero(void *, size_t);
+//extern void     bcopy(const void *, void *, size_t);
+//extern int      bcmp(const void *, const void *, size_t);
+//extern void     bzero(void *, size_t);
 
 /* Printf */
 
-extern int		sprintf(char *s, const char *fmt, ...);
+//extern int		sprintf(char *s, const char *fmt, ...);
 extern void		osSyncPrintf(const char *fmt, ...);
 
 

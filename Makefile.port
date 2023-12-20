@@ -88,7 +88,7 @@ endif
 ifneq (,$(findstring 64,$(TARGET_PLATFORM))$(findstring armv8,$(TARGET_PLATFORM)))
   # TODO: we're not 64-bit compatible yet, error out if building the actual game
   ifeq (,$(findstring clean,$(MAKECMDGOALS)))
-    $(error 64-bit target platforms are not supported yet)
+    #$(error 64-bit target platforms are not supported yet)
   endif
   TARGET_64BIT = 1
 else # TODO
@@ -151,7 +151,7 @@ else # assume *nix
   ifneq (,$(findstring arm,$(TARGET_PLATFORM))$(findstring aarch,$(TARGET_PLATFORM)))
     # linux on arm or aarch64
     # TODO: detect soft/hardfloat abi
-    TOOLCHAIN ?= arm-linux-gnueabihf-
+    TOOLCHAIN ?=
   endif
 endif
 
@@ -161,6 +161,8 @@ ifneq (,$(findstring x86_64,$(HOST_PLATFORM))$(findstring x86_64,$(TOOLCHAIN)))
     TARGET_CFLAGS += -m32
   endif
 endif
+
+#TARGET_CFLAGS += -m32 #TODO: rm temp hardcode
 
 # These are still used in the port, but only to generate headers.
 JSON_FILES := $(shell find $(A_DIR) -path '*/lang/*.json')
@@ -317,3 +319,6 @@ allclean:
 
 codeclean:
 	find $(B_DIR)/ -name '*.o' -delete
+
+################################################################################
+# Test / Debug

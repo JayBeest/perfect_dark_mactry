@@ -4,7 +4,9 @@
 #include "data.h"
 #include "types.h"
 
-u32 random(void);
+#define random(x) pd_random(x)
+
+long pd_random(void);
 u32 rngRotateSeed(u64 *value);
 
 #endif

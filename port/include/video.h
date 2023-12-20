@@ -23,6 +23,9 @@ void videoUpdateNativeResolution(s32 w, s32 h);
 s32 videoGetNativeWidth(void);
 s32 videoGetNativeHeight(void);
 
+s32 videoGetMaximizeWindow(void);
+void videoSetMaximizeWindow(s32 fs);
+
 s32 videoGetWidth(void);
 s32 videoGetHeight(void);
 f32 videoGetAspect(void);
