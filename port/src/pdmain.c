@@ -200,8 +200,8 @@ struct stageallocation g_StageAllocations4Mb[] = {
 
 Gfx var8005dcc8[] = {
 	gsSPSegment(0x00, 0x00000000),
-	gsSPDisplayList(&var800613a0),
-	gsSPDisplayList(&var80061380),
+	gsSPDisplayList((uintptr_t) &var800613a0),
+	gsSPDisplayList((uintptr_t) &var80061380),
 	gsDPFullSync(),
 	gsSPEndDisplayList(),
 };
@@ -566,7 +566,7 @@ void mainTick(void)
 			viUpdateMode();
 		}
 
-		rdpCreateTask(gdlstart, gdl, 0, (s32) &msg);
+		rdpCreateTask(gdlstart, gdl, 0, (intptr_t) &msg);
 		memaPrint();
 		profileSetMarker(PROFILE_MAINTICK_END);
 	}

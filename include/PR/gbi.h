@@ -1622,6 +1622,7 @@ typedef union {
 	long long int  force_structure_alignment;
 } Gfx;
 
+
 #ifdef PLATFORM_BIG_ENDIAN
 #define GFX_W0_BYTE(i) (i)
 #define GFX_W1_BYTE(i) (4 + (i))
@@ -1642,12 +1643,12 @@ typedef union {
     Gfx *_g = (Gfx *)(pkt);                                   \
                                                               \
     _g->words.w0 = _SHIFTL((c), 24, 8) | _SHIFTL((l), 0, 24); \
-    _g->words.w1 = (unsigned int)(s);                         \
+    _g->words.w1 = (uintptr_t)(s);                         \
 }
 
 #define gsDma0p(c, s, l)                                         \
 {                                                                \
-    _SHIFTL((c), 24, 8) | _SHIFTL((l), 0, 24), (unsigned int)(s) \
+    _SHIFTL((c), 24, 8) | _SHIFTL((l), 0, 24), (uintptr_t)(s) \
 }
 
 #define gDma1p(pkt, c, s, l, p)                                 \
@@ -1656,14 +1657,14 @@ typedef union {
                                                                 \
     _g->words.w0 = (_SHIFTL((c), 24, 8) | _SHIFTL((p), 16, 8) | \
             _SHIFTL((l), 0, 16));                               \
-    _g->words.w1 = (unsigned int)(s);                           \
+    _g->words.w1 = (uintptr_t)(s);                           \
 }
 
 #define gsDma1p(c, s, l, p)                      \
 {                                                \
     (_SHIFTL((c), 24, 8) | _SHIFTL((p), 16, 8) | \
      _SHIFTL((l), 0, 16)),                       \
-    (unsigned int)(s)                            \
+    (uintptr_t)(s)                            \
 }
 
 #define gDma2p(pkt, c, adrs, len, idx, ofs)                      \
@@ -1671,7 +1672,7 @@ typedef union {
     Gfx *_g = (Gfx *)(pkt);                                      \
     _g->words.w0 = (_SHIFTL((c),24,8)|_SHIFTL(((len)-1)/8,19,5)| \
             _SHIFTL((ofs)/8,8,8)|_SHIFTL((idx),0,8));            \
-    _g->words.w1 = (unsigned int)(adrs);                         \
+    _g->words.w1 = (uintptr_t)(adrs);                         \
 }
 
 #define gsDma2p(c, adrs, len, idx, ofs)           \
