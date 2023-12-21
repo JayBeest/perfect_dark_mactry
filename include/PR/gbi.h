@@ -20,6 +20,7 @@
 #ifndef _GBI_H_
 #define _GBI_H_
 
+#include <stdint.h>
 #include <PR/ultratypes.h>
 #include "gbiex.h"
 

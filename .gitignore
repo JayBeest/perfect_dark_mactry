@@ -23,3 +23,6 @@ src/generated
 tools/mkrom/mkrom
 /.vs
 .idea/
+.DS_Store
+log.txt
+temp

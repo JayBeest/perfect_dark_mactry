@@ -198,15 +198,18 @@ struct stageallocation g_StageAllocations4Mb[] = {
 	{ 0,                   "-ml0 -me0 -mgfx100 -mvtx96 -ma300"             },
 };
 
+
 Gfx var8005dcc8[] = {
 	gsSPSegment(0x00, 0x00000000),
-	gsSPDisplayList((uintptr_t) &var800613a0),
-	gsSPDisplayList((uintptr_t) &var80061380),
+	gsSPDisplayList(&var800613a0),
+	gsSPDisplayList(&var80061380),
 	gsDPFullSync(),
 	gsSPEndDisplayList(),
 };
 
 s32 g_MainIsBooting = 1;
+
+
 
 void mainInit(void)
 {
