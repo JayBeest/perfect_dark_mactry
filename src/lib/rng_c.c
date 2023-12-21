@@ -10,7 +10,7 @@ u64 g_RngSeed = 0xab8d9f7781280783;
 /**
  * Generate a random number between 0 and 4294967295.
  */
-u32 random(void)
+long int random(void) //TODO: remove dirty machack (long int was u32)
 {
 	g_RngSeed = ((g_RngSeed << 63) >> 31 | (g_RngSeed << 31) >> 32) ^ (g_RngSeed << 44) >> 32;
 	g_RngSeed = ((g_RngSeed >> 20) & 0xfff) ^ g_RngSeed;

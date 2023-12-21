@@ -6,7 +6,7 @@
 
 #define random(x) pd_random(x)
 
-long pd_random(void);
+long int pd_random(void); //TODO: remove dirty machack (long int was u32)
 u32 rngRotateSeed(u64 *value);
 
 #endif

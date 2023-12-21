@@ -2,6 +2,7 @@
 #include "n_libaudio.h"
 #include <os_internal.h>
 #include <ultraerror.h>
+#include <strings.h> //TODO: is only for clang
 
 void n_alEvtqNew(ALEventQueue *evtq, N_ALEventListItem *items, s32 itemCount)
 {
