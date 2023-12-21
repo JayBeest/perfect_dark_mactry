@@ -26,3 +26,4 @@ tools/mkrom/mkrom
 .DS_Store
 log.txt
 temp
+include/.DS_Store
