@@ -9,8 +9,8 @@
 #include "tiles.h"
 #include "gbi.h"
 
-#include "stdio.h"
-#include "strings.h"
+#include "stdio.h" // TODO: temp solution for clang
+#include "strings.h" // TODO: temp solution for clang
 
 #ifndef PLATFORM_N64
 #include "platform.h"

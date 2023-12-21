@@ -12,7 +12,7 @@
 #include "data.h"
 #include "types.h"
 
-#include "stdlib.h" // for clang
+#include "stdlib.h" // TODO: temp solution for clang
 
 /**
  * This file handles memory usage for graphics related tasks.

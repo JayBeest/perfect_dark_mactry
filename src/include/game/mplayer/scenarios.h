@@ -3,7 +3,8 @@
 #include <ultra64.h>
 #include "data.h"
 #include "types.h"
-#include "game/options.h"
+
+#include "game/options.h" // TODO: temp solution for clang
 
 extern struct menudialogdef g_MpScenarioMenuDialog;
 extern struct menudialogdef g_MpQuickTeamScenarioMenuDialog;
