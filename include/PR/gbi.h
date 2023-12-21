@@ -1539,8 +1539,8 @@ typedef struct {
  * Generic Gfx Packet
  */
 typedef struct {
-	unsigned int w0;
-	unsigned int w1;
+	uintptr_t w0;
+	uintptr_t w1;
 } Gwords;
 
 // xxxxxxxx 11223344 44555566 66666777
@@ -1700,6 +1700,7 @@ typedef union {
 
 #define gsSPViewport(v)                                      \
     gsDma1p(      G_MOVEMEM, (v), sizeof(Vp), G_MV_VIEWPORT)
+
 
 #define gSPDisplayList(pkt,dl)  gDma1p(pkt,G_DL,dl,0,G_DL_PUSH)
 #define gsSPDisplayList(   dl)  gsDma1p(   G_DL,dl,0,G_DL_PUSH)
