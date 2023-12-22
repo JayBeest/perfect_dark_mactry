@@ -4,7 +4,6 @@
 #include <string.h>
 #include <ctype.h>
 #include <PR/ultratypes.h>
-#include <PR/ultratypes.h>
 #include "lib/rzip.h"
 #include "romdata.h"
 #include "fs.h"

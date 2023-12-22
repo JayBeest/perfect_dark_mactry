@@ -250,8 +250,7 @@ COMMON_CFLAGS := $(C_DEFINES) -DAVOID_UB=1 $(INCLUDES) $(TARGET_CFLAGS) -g \
   -Wno-unused-but-set-variable \
   -Wno-unused-value \
   -Wno-unused-variable \
-  -Wno-format-truncation \
-  -fsanitize=address -g
+  -Wno-format-truncation -g #-fsanitize=address
 
 CFLAGS := $(COMMON_CFLAGS) -Wno-pointer-sign
 CXXFLAGS := $(COMMON_CFLAGS) -Wno-unused-function
